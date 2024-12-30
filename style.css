@@ -1,0 +1,474 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+*:focus,
+*:active {
+  outline: none;
+}
+
+:root {
+  /* color */
+  --color-green: #B9FF66;
+  --color-green-light: #f9fff3;
+
+  /* color */
+  --color-black: #000000;
+  --color-black-trans: rgba(0, 0, 0, 0.08);
+
+  /* color */
+  --color-dark: #171717;
+
+  /* color */
+  --color-white: #ffffff;
+  --color-white-trans: #ffffff;
+}
+
+/* --------------------------------------------------------------------------------------
+ *
+ *  HTML
+ *
+ *  ——
+ *  ——
+ *
+----------------------------------------------------------------------------------------- */
+html {
+  line-height: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Space Grotesk", sans-serif;
+
+  /* style */
+  background: var(--color-green-light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin: 0 !important;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+p {
+  line-height: 1.56;
+}
+
+ul,
+ol,
+dl {
+  line-height: 1.56;
+  list-style: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid var(--color-black-trans);
+}
+
+iframe {
+  width: 100%;
+  border: none;
+  height: 512px;
+}
+
+table,
+td,
+th {
+  border: 1px solid var(--color-black-trans);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-white);
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-green-light);
+}
+
+td,
+th {
+  padding: 16px;
+  text-align: left;
+  position: relative;
+}
+
+thead {
+  font-weight: 600;
+  color: var(--color-white);
+  background: var(--color-green);
+}
+
+/* --------------------------------------------------------------------------------------
+ *
+ *
+ *
+ *  —— 
+ *  —— 
+ *
+----------------------------------------------------------------------------------------- */
+
+/*  site header
+----------------------------------------------------------------------------------------- */
+.site-header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 128px;
+  display: flex;
+  position: sticky;
+  align-items: center;
+  background: var(--color-green-light);
+
+}
+
+.site-header [class*="col-"] {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* masthead panel */
+.masthead-panel {
+  gap: 32px;
+  display: flex;
+  align-items: center;
+}
+
+
+/*  site footer
+----------------------------------------------------------------------------------------- */
+.site-footer {
+  margin: 0 80px;
+  padding: 80px 0;
+  color: var(--color-white);
+  border-radius: 32px 32px 0 0;
+  background: var(--color-dark);
+}
+
+.site-footer [class*="col-"] {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* colophon panel */
+.colophon-panel {
+  gap: 32px;
+  display: flex;
+  align-items: center;
+}
+
+/* colophon divider */
+.colophon-divider {
+  border-color: var(--color-white);
+}
+
+
+/*  colophon branding
+------------------------------------------ */
+.colophon-branding {
+  display: flex;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------------------
+ *
+ *
+ *
+ *  —— 
+ *  —— 
+ *
+----------------------------------------------------------------------------------------- */
+section {
+  padding: 80px 0;
+}
+
+section:not(:last-child) {
+  border-bottom: 1px solid var(--color-black-trans);
+}
+
+/*  section: page header
+----------------------------------------------------------------------------------------- */
+section.page-header {
+  padding: 40px 0;
+}
+
+/* --------------------------------------------------------------------------------------
+ *
+ *
+ *
+ *  —— 
+ *  —— 
+ *
+----------------------------------------------------------------------------------------- */
+
+/*  site branding
+----------------------------------------------------------------------------------------- */
+.site-branding {
+  display: flex;
+  align-items: center;
+}
+
+/* site logo */
+.site-logo {
+  max-height: 24px;
+}
+
+/* site logo / inverse */
+.site-logo.inverse {
+  filter: brightness(0) invert(1);
+}
+
+/*  menu
+----------------------------------------------------------------------------------------- */
+.menu {
+  gap: 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* menu item */
+.menu-item {
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: ease-in-out 0.16s;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+}
+
+.menu-item.current {
+  color: var(--color-black);
+  background: var(--color-green);
+}
+
+/*  widget
+----------------------------------------------------------------------------------------- */
+.widget {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-title {
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--color-black);
+  background: var(--color-green);
+}
+
+/*  editor
+----------------------------------------------------------------------------------------- */
+.editor {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*  headline
+----------------------------------------------------------------------------------------- */
+.headline {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*  contact
+----------------------------------------------------------------------------------------- */
+.contact-group {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*  button
+----------------------------------------------------------------------------------------- */
+
+/*  button
+------------------------------------------ */
+button,
+.button {
+  gap: 8px;
+  height: 48px;
+  display: flex;
+  outline: none;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0px 16px;
+  text-align: center;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  transition: ease-in-out 0.16s;
+  border: 1px solid transparent;
+  background: var(--color-black);
+}
+
+/*  button group
+------------------------------------------ */
+.button-group {
+  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+}
+
+/* button group center */
+.button-group.center {
+  justify-content: center;
+}
+
+/*  thumbnail
+----------------------------------------------------------------------------------------- */
+.thumbnail {
+  gap: 8px;
+  height: 256px;
+  padding: 32px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  flex-direction: column;
+  background: transparent;
+  justify-content: flex-end;
+  color: var(--color-white);
+  transition: ease-in-out 0.16s;
+}
+
+/*  thumbnail media
+------------------------------------------ */
+.thumbnail-media {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: ease-in-out 0.16s;
+}
+
+/* <a> thumbnail / thumbnail media */
+a.thumbnail:hover .thumbnail-media {
+  transform: scale(1.08);
+}
+
+/*  card
+----------------------------------------------------------------------------------------- */
+.card {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* card title */
+.card-title {
+  font-weight: 600;
+}
+
+/*  form
+----------------------------------------------------------------------------------------- */
+form,
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  gap: 16px;
+}
+
+fieldset {
+  gap: 8px;
+  padding: 24px;
+  border-radius: 8px;
+  border: 2px solid var(--color-black);
+}
+
+/* fieldset group */
+.fieldset-group {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* fieldset group inline */
+.fieldset-group.inline {
+  flex-direction: row;
+}
+
+/* legend */
+legend {
+  padding: 0 32px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: none;
+  padding: 0 0 8px 0;
+  font-family: inherit;
+  background: transparent;
+  border-bottom: 2px solid var(--color-black-trans);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: max-content;
+}
